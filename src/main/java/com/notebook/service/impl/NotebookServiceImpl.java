@@ -59,4 +59,9 @@ public class NotebookServiceImpl implements NotebookService {
     public List<Notebook> findByProcessor(String cpu) {
         return dao.findAllByProcessor(cpu);
     }
+
+    @Override
+    public void deleteAll() {
+
+    }
 }

@@ -41,4 +41,9 @@ public class ProducerServiceImpl implements CrudService<Producer> {
     public List<Producer> findAll() {
         return dao.findAll();
     }
+
+    @Override
+    public void deleteAll() {
+        dao.deleteAll();
+    }
 }

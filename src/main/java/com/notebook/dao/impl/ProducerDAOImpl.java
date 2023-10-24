@@ -2,6 +2,7 @@ package com.notebook.dao.impl;
 
 import com.notebook.dao.CrudDAO;
 import com.notebook.domain.Producer;
+import com.notebook.repository.NotebookRepository;
 import com.notebook.repository.ProducerRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -15,6 +16,7 @@ import java.util.List;
 public class ProducerDAOImpl implements CrudDAO<Producer> {
 
     ProducerRepository repository;
+    NotebookRepository notebookRepository;
 
     @Override
     public void save(Producer producer) {
@@ -39,5 +41,10 @@ public class ProducerDAOImpl implements CrudDAO<Producer> {
     @Override
     public List<Producer> findAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public void deleteAll() {
+        repository.deleteAll();
     }
 }

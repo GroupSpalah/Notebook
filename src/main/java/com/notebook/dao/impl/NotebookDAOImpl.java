@@ -61,4 +61,9 @@ public class NotebookDAOImpl implements NotebookDao {
     public List<Notebook> findAllByProcessor(String cpu) {
         return repository.findAllByProcessor(cpu);
     }
+
+    @Override
+    public void deleteAll() {
+        repository.deleteAll();
+    }
 }
